@@ -9,10 +9,32 @@ import com.trello.model.Board;
 import com.trello.model.Card;
 import com.trello.model.Column;
 import com.trello.model.Label;
+import com.trello.service.BoardServiceImpl;
+import com.trello.service.CardServiceImpl;
+import com.trello.service.ColumnServiceImpl;
+import com.trello.service.IBoardService;
+import com.trello.service.ICardService;
+import com.trello.service.IColumnService;
 
 public class App {
 	public static void main(String[] args) {
 
+		
+		
+		
+		ICardService cardService = new CardServiceImpl();
+		IColumnService columnService = new ColumnServiceImpl();
+		IBoardService boardService = new BoardServiceImpl();
+		
+		
+		
+		Board board = new Board();
+		
+		board.setColumn(boardService.addColumn("ColumnOne"));
+		board.setColumn(boardService.addColumn("ColumnTwo"));
+		
+		System.out.println(board);
+		
 		Label lblOne = new Label(1, "ONE");
 		Label lblTwo = new Label(2, "TWO");
 		Label lblThree = new Label(3, "THREE");
@@ -34,12 +56,13 @@ public class App {
 		List<Column> colList = new ArrayList<Column>();
 		colList.add(colOne);
 		colList.add(colTwo);
-		Board board = new Board(colList);
+		
+		
 		
 		Gson gson = new Gson();
 		System.out.println(gson.toJson(board));
 
-		System.out.println(board);
+		
 
 	}
 

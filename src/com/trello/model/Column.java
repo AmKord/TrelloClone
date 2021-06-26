@@ -48,5 +48,8 @@ public class Column {
 		this.columnName = columnName;
 		this.cards = cards;
 	}
+	public Column() {
+		
+	}
 
 }

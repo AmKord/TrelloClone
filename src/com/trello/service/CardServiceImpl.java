@@ -12,6 +12,12 @@ public class CardServiceImpl implements ICardService{
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public List<Card> getCards(int columnId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	

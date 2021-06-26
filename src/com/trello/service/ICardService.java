@@ -10,6 +10,7 @@ public interface ICardService {
 	
 	public void addCard(Card card, List<Label> labels, int columnId) ;
 		
+	public List<Card> getCards(int columnId);
 	
 
 }

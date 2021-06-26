@@ -1,25 +1,30 @@
 package com.trello.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Board {
 
-	private List<Column> columns;
+	private List<Column> columns = new ArrayList<Column>();
 
-	/**
-	 * @param columns
-	 */
-	public Board(List<Column> columns) {
-		super();
-		this.columns = columns;
-	}
+	
+	
 
 	public List<Column> getColumns() {
 		return columns;
 	}
 
-	public void setColumns(List<Column> columns) {
-		this.columns = columns;
+	/**
+	 * 
+	 */
+	public Board() {
+		super();
+	}
+
+	
+	
+	public void setColumn(Column column) {
+		columns.add(column);
 	}
 
 	@Override
