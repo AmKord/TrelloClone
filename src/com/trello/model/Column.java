@@ -1,12 +1,13 @@
 package com.trello.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Column {
 
 	private int columnId;
 	private String columnName;
-	private List<Card> cards;
+	private List<Card> cards = new ArrayList<Card>();
 
 	public int getColumnId() {
 		return columnId;
@@ -30,6 +31,9 @@ public class Column {
 
 	public void setCards(List<Card> cards) {
 		this.cards = cards;
+	}
+	public void setCard(Card card) {
+		cards.add(card);
 	}
 
 	@Override

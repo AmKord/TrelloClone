@@ -5,7 +5,7 @@ import com.trello.model.Column;
 public class BoardServiceImpl implements IBoardService{
 
 	IColumnService columnService = new ColumnServiceImpl();
-	private static int columnId = 1;
+	private int columnId = 1;
 	@Override
 	public Column addColumn(String columnName) {
 		// TODO Auto-generated method stub

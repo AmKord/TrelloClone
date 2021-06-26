@@ -8,10 +8,10 @@ import com.trello.model.Column;
 
 public interface IColumnService {
 	
-	public void addCardsToColumn(int columnName, List<Card> cards);
+	
 	
 	public List<Column> getColumns(Board board);
 	
-	public List<Column> getColumn(Board board, int columnId);
+	public Column getColumn(Board board, String columnName);
 
 }

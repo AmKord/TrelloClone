@@ -27,7 +27,9 @@ public class Card {
 		this.columnId = columnId;
 	}
 
-
+	public Card() {
+		
+	}
 	public int getColumnId() {
 		return columnId;
 	}

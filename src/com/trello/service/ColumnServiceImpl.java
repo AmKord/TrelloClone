@@ -8,22 +8,20 @@ import com.trello.model.Column;
 
 public class ColumnServiceImpl implements IColumnService{
 
-	@Override
-	public void addCardsToColumn(int columnName, List<Card> cards) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 	@Override
 	public List<Column> getColumns(Board board) {
 		// TODO Auto-generated method stub
-		return null;
+		return board.getColumns();
+		
 	}
 
 	@Override
-	public List<Column> getColumn(Board board, int columnId) {
+	public Column getColumn(Board board, String columnName) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		return board.getColumns().stream().filter(e->e.getColumnName().equals(columnName)).findFirst().get();
 	}
 
 }
