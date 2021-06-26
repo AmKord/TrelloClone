@@ -3,7 +3,6 @@ package com.trello.service;
 import java.util.List;
 
 import com.trello.model.Board;
-import com.trello.model.Card;
 import com.trello.model.Column;
 
 public class ColumnServiceImpl implements IColumnService{

@@ -1,14 +1,8 @@
 package com.trello.resource;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import com.google.gson.Gson;
 import com.trello.model.Board;
-import com.trello.model.Card;
 import com.trello.model.Column;
-import com.trello.model.Label;
 import com.trello.service.BoardServiceImpl;
 import com.trello.service.CardServiceImpl;
 import com.trello.service.ColumnServiceImpl;
